@@ -13,6 +13,11 @@ namespace WebApplication1
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
+            app.MapSignalR();
+            Microsoft.AspNet.SignalR.StockTicker.Startup.ConfigureSignalR(app);
+
+
         }
     }
 }
